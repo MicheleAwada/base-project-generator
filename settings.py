@@ -132,7 +132,7 @@ if WILLING_TO_ACCEPT_HTTPS and HTTP_PROTOCOL == 'https://' and DEBUG:
 ALLOWED_HOSTS = [
     BACKEND_NAME,
 ]
-if DEBUG and BACKEND_NAME == "127.0.0.1:8000":
+if BACKEND_NAME == "127.0.0.1:8000":
     ALLOWED_HOSTS += ["127.0.0.1", "localhost"]
     INTERNAL_IPS = [
         "127.0.0.1"
